@@ -1,23 +1,16 @@
+import Navbar from './Navbar';
+import Header from './Header';
+import Calculator from './Calculator';
 import '../stylesheets/App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Navbar />
+      <Header />
+      <Calculator />
     </div>
   );
-}
+};
 
 export default App;
