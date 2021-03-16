@@ -1,30 +1,39 @@
-const CalculatorForm = () => {
+const CalculatorForm = (props) => {
   return (
-    <form>
+    <form onSubmit={props.handleSubmit}>
       <label>Loan amount</label>
       <input
         type="number"
-        name="loan-amount"
-        className="loan-amount"
-        placeholder="$"
+        name="principal"
+        value={props.principal}
         min="1"
         max="99999"
         step=".01"
+        onChange={props.handleChange}
       />
-      <label>Loan term in years</label>
-      <input required type="number" name="loan-term-years" min="1" step="1" />
-      <p>Or</p>
+      {/* <label>Loan term in years</label>
+      <input required type="number" name="loan-term-years"         value={props.months/12} min="1" step="1" />
+      <p>Or</p> */}
       <label>Loan term in months</label>
-      <input type="number" required name="loan-term-months" min="1" step="1" />
+      <input
+        type="number"
+        required
+        name="months"
+        value={props.months}
+        min="1"
+        step="1"
+        onChange={props.handleChange}
+      />
       <label>Interest rate per year</label>
       <input
         type="number"
         required
-        name="yearly-interest-rate"
-        placeholder="%"
+        name="interestRate"
+        value={props.interestRate}
         min=".01"
         max="30"
         step=".01"
+        onChange={props.handleChange}
       />
       <button type="submit">Calculate</button>
     </form>

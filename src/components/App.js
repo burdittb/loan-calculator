@@ -1,6 +1,7 @@
 import Navbar from './Navbar';
 import Header from './Header';
 import Calculator from './Calculator';
+import Description from './Description';
 import '../stylesheets/App.css';
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
       <Navbar />
       <Header />
       <Calculator />
+      <Description />
     </div>
   );
 };
